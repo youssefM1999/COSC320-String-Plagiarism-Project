@@ -1,4 +1,4 @@
-def lcs(src, sus, m, n):
+def lcss(src, sus, m, n):
  
     if m == 0 or n == 0:
        return 0
