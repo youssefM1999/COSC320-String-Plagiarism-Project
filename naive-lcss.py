@@ -3,8 +3,8 @@ import sys
 
 sys.setrecursionlimit(15000)
 
-src_file = open("Dataset/plagiarism_source.txt", encoding="utf-8")
-sus_file = open("Dataset/plagiarism_sus.txt", encoding="utf-8")
+src_file = open("Dataset/plagiarism_source_test.txt", encoding="utf-8")
+sus_file = open("Dataset/plagiarism_sus_test.txt", encoding="utf-8")
 
 src = src_file.read()
 sus = sus_file.read()
@@ -17,7 +17,6 @@ src_length = len(src_processed)
 sus_processed = ' '.join(sus.split('\n'))
 sus_length = len(sus_processed)
 
-# print(sus_processed)
 
 def lcss_naive(src, sus, m, n):
     
@@ -32,16 +31,11 @@ def lcss_naive(src, sus, m, n):
                 score = k
     return score
 
-   #  if m == 0 or n == 0:
-   #     return 0
-   #  elif src[m-1] == sus[n-1]:
-   #     return 1 + lcss(src, sus, m-1, n-1)
-   #  else:
-   #     return max(lcss(src, sus, m, n-1), lcss(src, sus, m-1, n))
     
 t0 = time()
 longest_subsequence = lcss_naive(src_processed, sus_processed, src_length, sus_length)
 t1 = time()
 
 # print(longest_subsequence)
-print(t1-t0)
+print("The longest common subsequence in this text is: " + str(longest_subsequence))
+print("The running time of this algorithm is: " + str(t1-t0))

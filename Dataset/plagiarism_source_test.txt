@@ -1,0 +1,20 @@
+Artificial intelligence (AI) that surpasses our own intelligence sounds like the stuff from science-fiction books or films. What do experts in the field of AI research think about such scenarios? Do they dismiss these ideas as fantasy, or are they taking such prospects seriously?
+
+A human-level AI would be a machine, or a network of machines, capable of carrying out the same range of tasks that we humans are capable of. It would be a machine that is “able to learn to do anything that a human can do”, as Norvig and Russell put it in their textbook on AI.1
+
+It would be able to choose actions that allow the machine to achieve its goals and then carry out those actions. It would be able to do the work of a translator, a doctor, an illustrator, a teacher, a therapist, a driver, or the work of an investor. 
+
+In recent years, several research teams contacted AI experts and asked them about their expectations for the future of machine intelligence. Such expert surveys are one of the pieces of information that we can rely on to form an idea of what the future of AI might look like.
+
+The chart shows the answers of 352 experts. This is from the most recent study by Katja Grace and her colleagues, conducted in the summer of 2022.2
+
+Experts were asked when they believe there is a 50% chance that human-level AI exists.3 Human-level AI was defined as unaided machines being able to accomplish every task better and more cheaply than human workers. More information about the study can be found in the fold-out box at the end of this text.4
+
+Each vertical line in this chart represents the answer of one expert. The fact that there are such large differences in answers makes it clear that experts do not agree on how long it will take until such a system might be developed. A few believe that this level of technology will never be developed. Some think that it’s possible, but it will take a long time. And many believe that it will be developed within the next few decades.
+
+As highlighted in the annotations, half of the experts gave a date before 2061, and 90% gave a date within the next 100 years.
+
+When do experts expect artificial general intelligence grace
+Other surveys of AI experts come to similar conclusions. In the following visualization, I have added the timelines from two earlier surveys conducted in 2018 and 2019. It is helpful to look at different surveys, as they differ in how they asked the question and how they defined human-level AI. You can find more details about these studies at the end of this text.
+
+In all three surveys, we see a large disagreement between experts and they also express large uncertainties about their own individual forecasts.
