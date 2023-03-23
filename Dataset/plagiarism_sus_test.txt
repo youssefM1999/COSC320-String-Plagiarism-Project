@@ -1,0 +1,15 @@
+Artificial intelligence (AI) that surpasses our own intelligence is a concept that has often been depicted in science-fiction literature and movies. However, recent developments in AI research have raised the possibility of such a scenario becoming a reality.
+
+Human-level AI would refer to a machine or a network of machines that possess the ability to perform a broad range of tasks that humans can do. This would include activities such as translation, medical diagnosis, illustration, teaching, therapy, driving, and investment management, to name a few.
+
+In recent years, AI experts have been contacted by research teams to gauge their expectations regarding the future of machine intelligence. These expert surveys provide valuable insights into how the field of AI might evolve.
+
+One such study, conducted in 2022 by Katja Grace and her colleagues, involved asking 352 experts when they believed there was a 50% chance of human-level AI being developed. Human-level AI was defined as unassisted machines being able to perform every task better and more cheaply than human workers.
+
+The chart displaying the answers of the 352 experts showed a significant divergence in opinions, indicating that experts do not concur on how long it will take to develop such a system. While a few believe that this level of technology will never be achieved, some think it is possible but will take a long time. The majority believe that it could be developed within the next few decades.
+
+According to the annotations, 50% of the experts provided a date before 2061, while 90% of the experts gave a date within the next 100 years.
+
+Additional surveys of AI experts conducted in 2018 and 2019 show similar conclusions, indicating that there is a substantial disagreement between experts, and they express significant uncertainties about their individual forecasts.
+
+In conclusion, the development of human-level AI is a subject of much debate and uncertainty among AI experts. While some believe that it may never be realized, the majority expect it to be achieved within the next few decades or century.
