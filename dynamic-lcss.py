@@ -3,8 +3,8 @@ import sys
 
 sys.setrecursionlimit(15000)
 
-src_file = open("Dataset/plagiarism_source.txt", encoding="utf-8")
-sus_file = open("Dataset/plagiarism_sus.txt", encoding="utf-8")
+src_file = open("Dataset/plagiarism_source_test.txt", encoding="utf-8")
+sus_file = open("Dataset/plagiarism_sus_test.txt", encoding="utf-8")
 
 src = src_file.read()
 sus = sus_file.read()
@@ -37,4 +37,6 @@ def lcss_dynamic(src, sus):
 t0 = time()
 longest_subsequence = lcss_dynamic(src_processed, sus_processed)
 t1 = time()
-print(t1-t0)
+
+print("The longest common subsequence in this text is: " + str(longest_subsequence))
+print("The running time of this algorithm is: " + str(t1-t0))
