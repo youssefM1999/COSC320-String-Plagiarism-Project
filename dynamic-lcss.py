@@ -1,22 +1,40 @@
-def lcss(src, sus):
+from time import time
+import sys
+
+sys.setrecursionlimit(15000)
+
+src_file = open("Dataset/plagiarism_source.txt", encoding="utf-8")
+sus_file = open("Dataset/plagiarism_sus.txt", encoding="utf-8")
+
+src = src_file.read()
+sus = sus_file.read()
+
+src = src.lower()
+sus = sus.lower()
+
+src_processed = ' '.join(src.split('\n'))
+src_length = len(src_processed)
+sus_processed = ' '.join(sus.split('\n'))
+sus_length = len(sus_processed)
+
+
+def lcss_dynamic(src, sus):
     # find the length of the strings
     m = len(src)
     n = len(sus)
- 
-    # declaring the array for storing the dp values
-    L = [[None]*(n + 1) for i in range(m + 1)]
- 
-    """Following steps build L[m + 1][n + 1] in bottom up fashion
-    Note: L[i][j] contains length of LCS of src[0..i-1]
-    and sus[0..j-1]"""
-    for i in range(m + 1):
-        for j in range(n + 1):
-            if i == 0 or j == 0 :
-                L[i][j] = 0
-            elif src[i-1] == sus[j-1]:
-                L[i][j] = L[i-1][j-1]+1
+
+    lcss = [[0] * (n+1) for _ in range(m+1)]
+    result = 0
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            if src[i-1] == sus[j-1]:
+                lcss[i][j] = lcss[i-1][j-1] + 1
+                result = max(result, lcss[i][j])
             else:
-                L[i][j] = masrc(L[i-1][j], L[i][j-1])
- 
-    # L[m][n] contains the length of LCS of src[0..n-1] & sus[0..m-1]
-    return L[m][n]
+                lcss[i][j] = 0
+    return result
+
+t0 = time()
+longest_subsequence = lcss_dynamic(src_processed, sus_processed)
+t1 = time()
+print(t1-t0)
