@@ -45,10 +45,11 @@ def computeLPS(lps, pat, M):
 import os
 import glob
 
-source_path = "Dataset/external-detection-corpus/source-documents/"
-suspicious_path = "Dataset/external-detection-corpus/suspicious-documents/"
+source_path = ""
+suspicious_path = ""
 
-
+src_files = glob.glob(source_path.name)
+print(src_files)
 
 # *Sources
 # The following online resources were used in researching the KMP algorithm for this implementation
