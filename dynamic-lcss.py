@@ -7,7 +7,7 @@ src_file = open("Dataset/plagiarism_source_6.txt", encoding="utf-8")
 sus_file = open("Dataset/plagiarism_sus_6.txt", encoding="utf-8")
 
 src = src_file.read()
-sus = sus_file.read()
+sus = sus_file.read()git
 
 src = src.lower()
 sus = sus.lower()

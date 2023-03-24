@@ -1,0 +1,128 @@
+Introduction
+Machine Learning is undeniably one of the most influential and powerful technologies in today’s world. More importantly, we are far from seeing its full potential. There’s no doubt, it will continue to be making headlines for the foreseeable future. This article is designed as an introduction to the Machine Learning concepts, covering all the fundamental ideas without being too high level.
+
+Machine learning is a tool for turning information into knowledge. In the past 50 years, there has been an explosion of data. This mass of data is useless unless we analyse it and find the patterns hidden within. Machine learning techniques are used to automatically find the valuable underlying patterns within complex data that we would otherwise struggle to discover. The hidden patterns and knowledge about a problem can be used to predict future events and perform all kinds of complex decision making.
+
+We are drowning in information and starving for knowledge — John Naisbitt
+
+Most of us are unaware that we already interact with Machine Learning every single day. Every time we Google something, listen to a song or even take a photo, Machine Learning is becoming part of the engine behind it, constantly learning and improving from every interaction. It’s also behind world-changing advances like detecting cancer, creating new drugs and self-driving cars.
+
+The reason that Machine Learning is so exciting, is because it is a step away from all our previous rule-based systems of:
+
+if(x = y): do z
+Traditionally, software engineering combined human created rules with data to create answers to a problem. Instead, machine learning uses data and answers to discover the rules behind a problem. (Chollet, 2017)
+
+
+
+Traditional Programming vs Machine Learning
+To learn the rules governing a phenomenon, machines have to go through a learning process, trying different rules and learning from how well they perform. Hence, why it’s known as Machine Learning.
+
+There are multiple forms of Machine Learning; supervised, unsupervised , semi-supervised and reinforcement learning. Each form of Machine Learning has differing approaches, but they all follow the same underlying process and theory. This explanation covers the general Machine Leaning concept and then focusses in on each approach.
+
+Terminology
+
+Dataset: A set of data examples, that contain features important to solving the problem.
+Features: Important pieces of data that help us understand a problem. These are fed in to a Machine Learning algorithm to help it learn.
+Model: The representation (internal model) of a phenomenon that a Machine Learning algorithm has learnt. It learns this from the data it is shown during training. The model is the output you get after training an algorithm. For example, a decision tree algorithm would be trained and produce a decision tree model.
+Process
+
+Data Collection: Collect the data that the algorithm will learn from.
+Data Preparation: Format and engineer the data into the optimal format, extracting important features and performing dimensionality reduction.
+Training: Also known as the fitting stage, this is where the Machine Learning algorithm actually learns by showing it the data that has been collected and prepared.
+Evaluation: Test the model to see how well it performs.
+Tuning: Fine tune the model to maximise it’s performance.
+Background Theory
+Origins
+The Analytical Engine weaves algebraic patterns just as the Jaquard weaves flowers and leaves — Ada Lovelace
+
+
+Ada Lovelace, one of the founders of computing, and perhaps the first computer programmer, realised that anything in the world could be described with math.
+
+More importantly, this meant a mathematical formula can be created to derive the relationship representing any phenomenon. Ada Lovelace realised that machines had the potential to understand the world without the need for human assistance.
+
+Around 200 years later, these fundamental ideas are critical in Machine Learning. No matter what the problem is, it’s information can be plotted onto a graph as data points. Machine Learning then tries to find the mathematical patterns and relationships hidden within the original information.
+
+Probability Theory
+Probability is orderly opinion… inference from data is nothing other than the revision of such opinion in the light of relevant new information — Thomas Bayes
+
+
+Another mathematician, Thomas Bayes, founded ideas that are essential in the probability theory that is manifested into Machine Learning.
+
+We live in a probabilistic world. Everything that happens has uncertainty attached to it. The Bayesian interpretation of probability is what Machine Learning is based upon. Bayesian probability means that we think of probability as quantifying the uncertainty of an event.
+
+Because of this, we have to base our probabilities on the information available about an event, rather than counting the number of repeated trials. For example, when predicting a football match, instead of counting the total amount of times Manchester United have won against Liverpool, a Bayesian approach would use relevant information such as the current form, league placing and starting team.
+
+The benefit of taking this approach is that probabilities can still be assigned to rare events, as the decision making process is based on relevant features and reasoning.
+
+Machine Learning Approaches
+
+There are many approaches that can be taken when conducting Machine Learning. They are usually grouped into the areas listed below. Supervised and Unsupervised are well established approaches and the most commonly used. Semi-supervised and Reinforcement Learning are newer and more complex but have shown impressive results.
+
+The No Free Lunch theorem is famous in Machine Learning. It states that there is no single algorithm that will work well for all tasks. Each task that you try to solve has it’s own idiosyncrasies. Therefore, there are lots of algorithms and approaches to suit each problems individual quirks. Plenty more styles of Machine Learning and AI will keep being introduced that best fit different problems.
+
+Supervised Learning
+Unsupervised Learning
+Semi-supervised Learning
+Reinforcement Learning
+Supervised Learning
+
+In supervised learning, the goal is to learn the mapping (the rules) between a set of inputs and outputs.
+
+For example, the inputs could be the weather forecast, and the outputs would be the visitors to the beach. The goal in supervised learning would be to learn the mapping that describes the relationship between temperature and number of beach visitors.
+
+Example labelled data is provided of past input and output pairs during the learning process to teach the model how it should behave, hence, ‘supervised’ learning. For the beach example, new inputs can then be fed in of forecast temperature and the Machine learning algorithm will then output a future prediction for the number of visitors.
+
+Being able to adapt to new inputs and make predictions is the crucial generalisation part of machine learning. In training, we want to maximise generalisation, so the supervised model defines the real ‘general’ underlying relationship. If the model is over-trained, we cause over-fitting to the examples used and the model would be unable to adapt to new, previously unseen inputs.
+
+A side effect to be aware of in supervised learning that the supervision we provide introduces bias to the learning. The model can only be imitating exactly what it was shown, so it is very important to show it reliable, unbiased examples. Also, supervised learning usually requires a lot of data before it learns. Obtaining enough reliably labelled data is often the hardest and most expensive part of using supervised learning. (Hence why data has been called the new oil!)
+
+The output from a supervised Machine Learning model could be a category from a finite set e.g [low, medium, high] for the number of visitors to the beach:
+
+Input [temperature=20] -> Model -> Output = [visitors=high]
+When this is the case, it’s is deciding how to classify the input, and so is known as classification.
+
+Alternatively, the output could be a real-world scalar (output a number):
+
+Input [temperature=20] -> Model -> Output = [visitors=300]
+When this is the case, it is known as regression.
+
+
+Classification
+Classification is used to group the similar data points into different sections in order to classify them. Machine Learning is used to find the rules that explain how to separate the different data points.
+
+But how are the magical rules created? Well, there are multiple ways to discover the rules. They all focus on using data and answers to discover rules that linearly separate data points.
+
+Linear separability is a key concept in machine learning. All that linear separability means is ‘can the different data points be separated by a line?’. So put simply, classification approaches try to find the best way to separate data points with a line.
+
+The lines drawn between classes are known as the decision boundaries. The entire area that is chosen to define a class is known as the decision surface. The decision surface defines that if a data point falls within its boundaries, it will be assigned a certain class.
+
+
+Regression
+Regression is another form of supervised learning. The difference between classification and regression is that regression outputs a number rather than a class. Therefore, regression is useful when predicting number based problems like stock market prices, the temperature for a given day, or the probability of an event.
+
+
+Examples
+Regression is used in financial trading to find the patterns in stocks and other assets to decide when to buy/sell and make a profit. For classification, it is already being used to classify if an email you receive is spam.
+
+Both the classification and regression supervised learning techniques can be extended to much more complex tasks. For example, tasks involving speech and audio. Image classification, object detection and chat bots are some examples.
+
+A recent example shown below uses a model trained with supervised learning to realistically fake videos of people talking.
+
+You might be wondering how does this complex image based task relate to classification or regression? Well, it comes back to everything in the world, even complex phenomenon, being fundamentally described with math and numbers. In this example, a neural network is still only outputting numbers like in regression. But in this example the numbers are the numerical 3d coordinate values of a facial mesh.
+
+
+Unsupervised Learning
+
+In unsupervised learning, only input data is provided in the examples. There are no labelled example outputs to aim for. But it may be surprising to know that it is still possible to find many interesting and complex patterns hidden within data without any labels.
+
+An example of unsupervised learning in real life would be sorting different colour coins into separate piles. Nobody taught you how to separate them, but by just looking at their features such as colour, you can see which colour coins are associated and cluster them into their correct groups.
+
+
+An unsupervised learning algorithm (t-SNE) correctly clusters handwritten digits into groups, based only on their characteristics
+Unsupervised learning can be harder than supervised learning, as the removal of supervision means the problem has become less defined. The algorithm has a less focused idea of what patterns to look for.
+
+Think of it in your own learning. If you learnt to play the guitar by being supervised by a teacher, you would learn quickly by re-using the supervised knowledge of notes, chords and rhythms. But if you only taught yourself, you’d find it so much harder knowing where to start.
+
+By being unsupervised in a laissez-faire teaching style, you start from a clean slate with less bias and may even find a new, better way solve a problem. Therefore, this is why unsupervised learning is also known as knowledge discovery. Unsupervised learning is very useful when conducting exploratory data analysis.
+
+To find the interesting structures in unlabeled data, we use density estimation. The most common form of which is clustering. Among others, there is also dimensionality reduction, latent variable models and anomaly detection. More complex unsupervised techniques involve neural networks like Auto-encoders and Deep Belief Networks, but we won’t go into them in this introduction blog.

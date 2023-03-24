@@ -1,0 +1,7 @@
+What is Machine Learning?
+
+Machine Learning is a technology that uses algorithms to automatically identify patterns and generate insights from data. It is used to extract valuable information and knowledge from complex data that would be difficult for humans to analyze. This technology is used in many different applications, from image and speech recognition to self-driving cars, and it is constantly evolving to be more accurate and efficient.
+
+The main difference between traditional programming and machine learning is that traditional programming involves writing rules based on data to solve a problem, while machine learning involves using data to automatically generate rules that can be used to solve a problem.
+
+There are several different types of machine learning, including supervised learning, unsupervised learning, semi-supervised learning, and reinforcement learning. Each type of machine learning has its own set of techniques and algorithms for analyzing data and generating insights.
