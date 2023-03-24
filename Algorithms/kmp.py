@@ -6,7 +6,7 @@ import glob
 # *Method Definitions
 
 
-def KMP(pat, text):
+def KMP(pat: str, text: str, indexes: list):
     # *KMP search implementation
     N = len(text)
     M = len(pat)
@@ -21,7 +21,7 @@ def KMP(pat, text):
             j += 1
 
         if j == M:  # if j reaches end of pattern, pattern has been found
-            print("Found plagiarism at index " + str(i-j))
+            indexes.append(i-j)
             j = lps[j-1]
 
         elif i < N and pat[j] != text[i]:  # mismatch
@@ -32,7 +32,7 @@ def KMP(pat, text):
                 i += 1  # else, go on to the next one without updating j
 
 
-def computeLPS(lps, pat, M):
+def computeLPS(lps: list, pat: str, M: int):
     # *longest proper prefix preprocessing
 
     len_lps = 0  # length of the longest prefix suffix value
@@ -51,11 +51,9 @@ def computeLPS(lps, pat, M):
             i += 1
 
 # *main
-# @param src_file
-#
 
 
-def main(src_file_path, sus_file_path):
+def runKMP(src_file_path, sus_file_path):
     """
     Run KMP on a suspected plagiarised text against a source text.
 
@@ -75,25 +73,13 @@ def main(src_file_path, sus_file_path):
     for sentence in sentences:
         src_sentences.append(sentence)
 
+    indexes = []
+
     for src_sentence in src_sentences:
-        KMP(src_sentence, sus_contents)
+        KMP(src_sentence, sus_contents, indexes)
 
-    # source_path = r"Dataset/external-detection-corpus/source-documents"
-    # suspicious_path = r"Dataset/external-detection-corpus/suspicious-documents"
-
-    # src_files = [f for f in os.listdir(source_path)]
-    # sus_files = [f for f in os.listdir(suspicious_path)]
-
-    # for filename in sus_files:
-    #     with open(os.path.join(suspicious_path, filename), 'r', encoding="utf8") as file:
-    #         contents = file.read()
-    #         print(contents[1])
-
-    # for filename in src_files:
-    #     with open(os.path.join(source_path, filename), 'r', encoding="utf8") as file:
-    #         contents = file.read()
-    #         if 'hello' in contents:
-    #             print(f"Found 'hello' in file {filename}")
+    for index in indexes:
+        print(f"Found plagiarism at index {index}")
 
 # *Sources
 # The following online resources were used in researching the KMP algorithm for this implementation
