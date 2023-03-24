@@ -3,8 +3,8 @@ import sys
 
 sys.setrecursionlimit(15000)
 
-src_file = open("Dataset/plagiarism_source_5.txt", encoding="utf-8")
-sus_file = open("Dataset/plagiarism_sus_5.txt", encoding="utf-8")
+src_file = open("Dataset/plagiarism_source_6.txt", encoding="utf-8")
+sus_file = open("Dataset/plagiarism_sus_6.txt", encoding="utf-8")
 
 src = src_file.read()
 sus = sus_file.read()
@@ -22,9 +22,6 @@ def lcss_dynamic(src, sus):
     # find the length of the strings
     m = len(src)
     n = len(sus)
-
-    print(m)
-    print(n)
 
     lcss = [[0] * (n+1) for _ in range(m+1)]
     result = 0
