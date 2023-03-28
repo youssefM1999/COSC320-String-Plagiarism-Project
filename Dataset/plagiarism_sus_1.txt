@@ -1,8 +1,8 @@
-Artificial intelligence (AI) that surpasses our own intelligence is a concept that has often been depicted in science-fiction literature and movies. However, recent developments in AI research have raised the possibility of such a scenario becoming a reality.
+Artificial intelligence (AI) that surpasses our own intelligence is a concept that has often been depicted in science-fiction literature and movies. Do they dismiss these ideas as fantasy, or are they taking such prospects seriously? However, recent developments in AI research have raised the possibility of such a scenario becoming a reality.
 
 Human-level AI would refer to a machine or a network of machines that possess the ability to perform a broad range of tasks that humans can do. This would include activities such as translation, medical diagnosis, illustration, teaching, therapy, driving, and investment management, to name a few.
 
-In recent years, AI experts have been contacted by research teams to gauge their expectations regarding the future of machine intelligence. These expert surveys provide valuable insights into how the field of AI might evolve.
+In recent years, AI experts have been contacted by research teams to gauge their expectations regarding the future of machine intelligence. These expert surveys provide valuable insights into how the field of AI might evolve. 
 
 One such study, conducted in 2022 by Katja Grace and her colleagues, involved asking 352 experts when they believed there was a 50% chance of human-level AI being developed. Human-level AI was defined as unassisted machines being able to perform every task better and more cheaply than human workers.
 
