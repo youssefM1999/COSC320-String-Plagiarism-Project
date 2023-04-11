@@ -15,6 +15,7 @@ sus_dataset = natsorted(
 print("Source files: " + str(src_dataset))
 print("Suspicious files: " + str(sus_dataset))
 
+
 for i in range(src_dataset.__len__()):
     src_file = src_dataset[i]
     sus_file = sus_dataset[i]
