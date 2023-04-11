@@ -1,3 +1,5 @@
+import glob
+from natsort import natsorted, ns
 from time import time
 from Algorithms import kmp, dynamic_lcss, naive_lcss
 
@@ -5,27 +7,13 @@ kmp_times = []
 naive_lcss_times = []
 dynamic_lcss_times = []
 
-src_dataset = ["Dataset\plagiarism_source_1.txt",
-               "Dataset\plagiarism_source_2.txt",
-               "Dataset\plagiarism_source_3.txt",
-               "Dataset\plagiarism_source_4.txt",
-               "Dataset\plagiarism_source_5.txt",
-               "Dataset\plagiarism_source_6.txt",
-               "Dataset\plagiarism_source_7.txt",
-               "Dataset\plagiarism_source_8.txt",
-               "Dataset\plagiarism_source_9.txt",
-               "Dataset\plagiarism_source_10.txt"]
+src_dataset = natsorted(glob.glob("Dataset/Source/*.txt"), alg=ns.IGNORECASE)
 
-sus_dataset = ["Dataset\plagiarism_sus_1.txt",
-               "Dataset\plagiarism_sus_2.txt",
-               "Dataset\plagiarism_sus_3.txt",
-               "Dataset\plagiarism_sus_4.txt",
-               "Dataset\plagiarism_sus_5.txt",
-               "Dataset\plagiarism_sus_6.txt",
-               "Dataset\plagiarism_sus_7.txt",
-               "Dataset\plagiarism_sus_8.txt",
-               "Dataset\plagiarism_sus_9.txt",
-               "Dataset\plagiarism_sus_10.txt"]
+sus_dataset = natsorted(
+    glob.glob("Dataset/Suspicious/*.txt"), alg=ns.IGNORECASE)
+
+print("Source files: " + str(src_dataset))
+print("Suspicious files: " + str(sus_dataset))
 
 for i in range(src_dataset.__len__()):
     src_file = src_dataset[i]
