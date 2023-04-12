@@ -1,5 +1,21 @@
-# COSC320-String-Plagiarism-Project
+# COSC 320 - Algorithm Analysis Project
 
-This repository is for the team to work collaboratively on the implementation of the String Plagiarism Project.
+### Team and Contributions
 
-The link to the dataset is: https://drive.google.com/file/d/1PpK8O7l_Cmcw3ribXSSJLp1TNGNa-VHL/view?usp=sharing
+Esteban Martinez (22717805)
+
+-   `main.py` and `kmp.py`
+-   `README.md` report
+-   Dataset
+
+Youssef Mahmoud (37624970)
+
+Khalid Mahmoud (28842458)
+
+## Problem Formulation
+
+## Algorithms and Implementation
+
+## Running Time Analysis
+
+## Conclusion
