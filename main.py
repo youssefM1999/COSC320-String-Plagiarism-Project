@@ -10,14 +10,14 @@ dynamic_lcss_times = []
 rabin_karp_times = []
 
 src_dataset = natsorted(
-    glob.glob("Data/sources/*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data/external-detection-corpus/source-documents/*.txt"), alg=ns.IGNORECASE)
 
 sus_dataset = natsorted(
-    glob.glob("Data/sus/*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data/external-detection-corpus/source-documents/*.txt"), alg=ns.IGNORECASE)
 
 
 def testAlgorithm(myFunction, time_array: list, algoName: str):
-    for i in range(len(src_dataset)):
+    for i in range(5):
         src_file = src_dataset[i]
         sus_file = sus_dataset[i]
 
