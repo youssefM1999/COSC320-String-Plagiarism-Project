@@ -1,9 +1,0 @@
-The two algorithms are implementations of the Longest Common Substring (LCSS) problem, which is to find the longest substring that is present in two given strings.
-
-The first algorithm is a naive approach that uses a nested loop to compare every possible substring of the two strings. It starts with the first character of the first string and compares it with the first character of the second string, then it moves to the second character of the first string and compares it with the first and subsequent characters of the second string until it finds a mismatch or reaches the end of either string. The algorithm keeps track of the length of the longest common substring found so far, and updates it if a longer substring is found. The time complexity of this algorithm is O(mn^2), where m and n are the lengths of the input strings.
-
-The second algorithm is a dynamic programming approach that uses a 2D matrix to store the lengths of the longest common substrings between all prefixes of the two strings. It starts with an empty matrix of size (m+1) x (n+1), where m and n are the lengths of the input strings. The algorithm then iterates through the matrix, comparing the characters of the two strings at each position. If the characters match, the algorithm updates the value in the matrix to be the length of the longest common substring up to that position. If the characters do not match, the value in the matrix is set to zero. The algorithm keeps track of the maximum value in the matrix, which represents the length of the longest common substring. The time complexity of this algorithm is O(mn), which is more efficient than the naive approach for large input strings.
-
-
-
-
