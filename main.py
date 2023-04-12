@@ -10,10 +10,10 @@ dynamic_lcss_times = []
 rabin_karp_times = []
 
 src_dataset = natsorted(
-    glob.glob("Data\sources\*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data/sources/*.txt"), alg=ns.IGNORECASE)
 
 sus_dataset = natsorted(
-    glob.glob("Data\sus\*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data/sus/*.txt"), alg=ns.IGNORECASE)
 
 
 def testAlgorithm(myFunction, time_array: list, algoName: str):
