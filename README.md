@@ -8,6 +8,8 @@ Esteban Martinez (22717805)
 -   `README.md` report
 -   Dataset
 
+TODO: ADD nltk.download("punkt") to instructions
+
 Youssef Mahmoud (37624970)
 
 Khalid Mahmoud (28842458)
