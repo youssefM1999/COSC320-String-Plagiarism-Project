@@ -1,7 +1,5 @@
 import glob
 import matplotlib.pyplot as plt
-import numpy as np
-from scipy.interpolate import make_interp_spline, BSpline
 from natsort import natsorted, ns
 from time import time
 from Algorithms import kmp, dynamic_lcss, naive_lcss
@@ -10,9 +8,11 @@ kmp_times = []
 naive_lcss_times = []
 dynamic_lcss_times = []
 
-src_dataset = natsorted(glob.glob("Dataset\sources\*.txt"), alg=ns.IGNORECASE)
+src_dataset = natsorted(
+    glob.glob("Data\sources\*.txt"), alg=ns.IGNORECASE)
 
-sus_dataset = natsorted(glob.glob("Dataset\sus\*.txt"), alg=ns.IGNORECASE)
+sus_dataset = natsorted(
+    glob.glob("Data\sus\*.txt"), alg=ns.IGNORECASE)
 
 
 def testAlgorithm(myFunction, time_array: list, algoName: str):
@@ -44,6 +44,8 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
     plt.legend()
     plt.show()
 
+
+# TODO: Add new algorithm and add comparison functions
 
 testAlgorithm(kmp.runKMP, kmp_times, "KMP")
 testAlgorithm(naive_lcss.runLCSS_naive, naive_lcss_times, "Naive LCSS")
