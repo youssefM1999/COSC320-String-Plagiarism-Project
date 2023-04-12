@@ -49,6 +49,7 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
 
 # TODO: Add comparison functions
 
+
 testAlgorithm(rabin_karp.runRabinKarp, rabin_karp_times, "Rabin Karp")
 testAlgorithm(kmp.runKMP, kmp_times, "KMP")
 testAlgorithm(dynamic_lcss.runLCSS_dynamic, dynamic_lcss_times, "Dynamic LCSS")
