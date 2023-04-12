@@ -1,8 +1,11 @@
+import sys
 import glob
 import matplotlib.pyplot as plt
 from natsort import natsorted, ns
 from time import time
 from Algorithms import kmp, dynamic_lcss, naive_lcss
+
+sys.setrecursionlimit(15000)
 
 kmp_times = []
 naive_lcss_times = []
@@ -16,7 +19,7 @@ sus_dataset = natsorted(
 
 
 def testAlgorithm(myFunction, time_array: list, algoName: str):
-    for i in range(src_dataset.__len__()):
+    for i in range(10):
         src_file = src_dataset[i]
         sus_file = sus_dataset[i]
 
@@ -24,6 +27,7 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
         input_size = len(open(src_file, encoding="utf-8").read()) + \
             len(open(sus_file, encoding="utf-8").read())
 
+        print("Running " + algoName + " on documents number " + str(i+1))
         # Run algorithm and measure running time
         t0 = time()
         myFunction(src_file, sus_file)
