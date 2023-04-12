@@ -53,4 +53,4 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
 testAlgorithm(rabin_karp.runRabinKarp, rabin_karp_times, "Rabin Karp")
 testAlgorithm(kmp.runKMP, kmp_times, "KMP")
 testAlgorithm(dynamic_lcss.runLCSS_dynamic, dynamic_lcss_times, "Dynamic LCSS")
-testAlgorithm(naive_lcss.runLCSS_naive, naive_lcss_times, "Naive LCSS")
+# testAlgorithm(naive_lcss.runLCSS_naive, naive_lcss_times, "Naive LCSS")
