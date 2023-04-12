@@ -1,7 +1,7 @@
 from time import time
 import sys
 
-sys.setrecursionlimit(15000)
+# sys.setrecursionlimit(15000)
 
 
 def runLCSS_naive(src_file_str: str, sus_file_str: str):

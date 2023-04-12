@@ -3,7 +3,7 @@ import sys
 
 
 def runLCSS_dynamic(src_file_str: str, sus_file_str: str):
-    sys.setrecursionlimit(15000)
+    # sys.setrecursionlimit(15000)
 
     src_file = open(src_file_str, encoding="utf-8")
     sus_file = open(sus_file_str, encoding="utf-8")
