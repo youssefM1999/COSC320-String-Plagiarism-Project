@@ -9,10 +9,10 @@ naive_lcss_times = []
 dynamic_lcss_times = []
 
 src_dataset = natsorted(
-    glob.glob("Data\sources\*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data\external-detection-corpus\source-documents\*.txt"), alg=ns.IGNORECASE)
 
 sus_dataset = natsorted(
-    glob.glob("Data\sus\*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data\external-detection-corpus\suspicious-documents\*.txt"), alg=ns.IGNORECASE)
 
 
 def testAlgorithm(myFunction, time_array: list, algoName: str):
