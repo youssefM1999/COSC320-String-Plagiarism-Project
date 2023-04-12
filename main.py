@@ -24,7 +24,7 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
         input_size = len(open(src_file, encoding="utf-8").read()) + \
             len(open(sus_file, encoding="utf-8").read())
 
-        # LCSS naive run (quadratic time)
+        # Run algorithm and measure running time
         t0 = time()
         myFunction(src_file, sus_file)
         t1 = time()
@@ -42,7 +42,7 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
     plt.xlabel("Input size")
     plt.ylabel("Running time")
     plt.legend()
-    plt.show()
+    plt.savefig("Plots/" + algoName + ".png")
 
 
 # TODO: Add new algorithm and add comparison functions
