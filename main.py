@@ -1,4 +1,7 @@
 import glob
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.interpolate import make_interp_spline, BSpline
 from natsort import natsorted, ns
 from time import time
 from Algorithms import kmp, dynamic_lcss, naive_lcss
@@ -7,42 +10,41 @@ kmp_times = []
 naive_lcss_times = []
 dynamic_lcss_times = []
 
-src_dataset = natsorted(glob.glob("Dataset/Source/*.txt"), alg=ns.IGNORECASE)
+src_dataset = natsorted(glob.glob("Dataset\sources\*.txt"), alg=ns.IGNORECASE)
 
-sus_dataset = natsorted(
-    glob.glob("Dataset/Suspicious/*.txt"), alg=ns.IGNORECASE)
-
-print("Source files: " + str(src_dataset))
-print("Suspicious files: " + str(sus_dataset))
+sus_dataset = natsorted(glob.glob("Dataset\sus\*.txt"), alg=ns.IGNORECASE)
 
 
-for i in range(src_dataset.__len__()):
-    src_file = src_dataset[i]
-    sus_file = sus_dataset[i]
+def testAlgorithm(myFunction, time_array: list, algoName: str):
+    for i in range(src_dataset.__len__()):
+        src_file = src_dataset[i]
+        sus_file = sus_dataset[i]
 
-    # KMP run (linear time)
-    t0 = time()
-    kmp.runKMP(src_file,
-               sus_file)
-    t1 = time()
-    kmp_times.append(t1-t0)
+        # length of source file + length of sus file
+        input_size = len(open(src_file, encoding="utf-8").read()) + \
+            len(open(sus_file, encoding="utf-8").read())
 
-    # LCSS naive run (quadratic time)
-    # t0 = time()
-    # naive_lcss.runLCSS_naive(
-    #     src_file, sus_file)
+        # LCSS naive run (quadratic time)
+        t0 = time()
+        myFunction(src_file, sus_file)
+        t1 = time()
 
-    # t1 = time()
-    # naive_lcss_times.append(t1-t0)
+        time_array.append([t1-t0, input_size])
 
-    # LCSS dynamic run (quadratic time)
-    # t0 = time()
-    # dynamic_lcss.runLCSS_dynamic(
-    #     src_file, sus_file)
+    # Running time sorted by input size
+    time_array.sort(key=lambda x: x[1])
 
-    # t1 = time()
-    # dynamic_lcss_times.append(t1-t0)
+    # Plotting the running times
+    running_times = [x[0] for x in time_array]
+    input_sizes = [x[1] for x in time_array]
 
-print("KMP running times: " + str(kmp_times))
-# print("Naive LCSS running times: " + str(naive_lcss_times))
-# print("Dynamic LCSS running times: " + str(dynamic_lcss_times))
+    plt.plot(input_sizes, running_times, label=algoName)
+    plt.xlabel("Input size")
+    plt.ylabel("Running time")
+    plt.legend()
+    plt.show()
+
+
+testAlgorithm(kmp.runKMP, kmp_times, "KMP")
+testAlgorithm(naive_lcss.runLCSS_naive, naive_lcss_times, "Naive LCSS")
+testAlgorithm(dynamic_lcss.runLCSS_dynamic, dynamic_lcss_times, "Dynamic LCSS")
