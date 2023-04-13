@@ -2,10 +2,11 @@ import glob
 import matplotlib.pyplot as plt
 from natsort import natsorted, ns
 from time import time
-from Algorithms import kmp, dynamic_lcss, naive_lcss, rabin_karp
+from Algorithms import kmp, rabin_karp, optimized_lcss, dynamic_lcss, naive_lcss
 
 kmp_times = []
 naive_lcss_times = []
+optimized_lcss_times = []
 dynamic_lcss_times = []
 rabin_karp_times = []
 
@@ -53,7 +54,9 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
 # TODO: Add comparison functions
 
 
-testAlgorithm(rabin_karp.runRabinKarp, rabin_karp_times, "Rabin Karp")
-testAlgorithm(kmp.runKMP, kmp_times, "KMP")
-testAlgorithm(dynamic_lcss.runLCSS_dynamic, dynamic_lcss_times, "Dynamic LCSS")
+# testAlgorithm(rabin_karp.runRabinKarp, rabin_karp_times, "Rabin Karp")
+# testAlgorithm(kmp.runKMP, kmp_times, "KMP")
+testAlgorithm(optimized_lcss.runLCSS_optimized,
+              optimized_lcss_times, "Optimized LCSS")
+# testAlgorithm(dynamic_lcss.runLCSS_dynamic, dynamic_lcss_times, "Dynamic LCSS")
 # testAlgorithm(naive_lcss.runLCSS_naive, naive_lcss_times, "Naive LCSS")
