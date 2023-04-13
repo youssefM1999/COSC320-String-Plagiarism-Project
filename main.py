@@ -17,7 +17,7 @@ sus_dataset = natsorted(
 
 
 def testAlgorithm(myFunction, time_array: list, algoName: str):
-    for i in range(5):
+    for i in range(len(src_dataset)[-10:]):
         src_file = src_dataset[i]
         sus_file = sus_dataset[i]
 
