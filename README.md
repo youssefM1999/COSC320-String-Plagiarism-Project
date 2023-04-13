@@ -34,12 +34,36 @@ The project is broken down into three directories and one `main.py` file which i
 
 ## How it Works
 
-`main.py` is a simple program for running the algorithms, and can be easily edited to run on different files by editing the `src_dataset` and `sus_dataset` file paths. The program defines the `testAlgorithm` function, and calls it to run the algorithms on the dataset. It is currently configured to run on the last 10 files of the dataset.
+`main.py` is a simple program for running the algorithms, and can be easily edited to run on different files by editing the `src_dataset` and `sus_dataset` file paths. The program defines the `testAlgorithm` function, and calls it to run the algorithms on the dataset.
 
 ## Problems Encountered
 
-Due to the massive size of some of the files, the program can take an enormous amount of time to compute. For this reason, we decided to use a compute dedicated cloud computer using the Google Cloud Compute Engine API (AMD based, 8 core, 32 GB RAM) to do our large calculations. This allowed us to produce graphs for the KMP and Rabin Karp algorithms with our large dataset, but we still ran into memory issues with our LCSS algorithms. For this
+Due to the massive size of some of the files, the program can take an enormous amount of time to compute. For this reason, we decided to use a compute dedicated cloud computer using the Google Cloud Compute Engine API (AMD based, 8 core, 32 GB RAM) to do our large calculations.
+
+This allowed us to produce graphs for the KMP and Rabin Karp algorithms with our large dataset, but we still ran into memory issues with our LCSS algorithms. This was because our LCSS implementations used a 2D array, as well as temporary storage for our files in the form of `src_processed` and `sus_processed`.
+
+For this reason, we created another implementation, `optimized_lcss.py` which instead iterates the files line by line to check for longest common subsequences and does not created a processed version of the file. It also does not create a 2D array and instead uses 2 different arrays.
+
+With this new file we were able to produce a graph using our large dataset.
 
 ## How to Run
 
-TODO: ADD nltk.download("punkt") to instructions
+1. Clone the repository
+2. Use the command `pip install -r requirements.txt` to install the required packages
+3. Run `import nltk` in a python shell and run `nltk.download("punkt")` to download the required nltk package for the KMP implementation
+4. Run `python main.py` to run the program
+
+## Results
+
+### Large Dataset
+
+Rabin Karp Algorithm with Large Dataset
+![Rabin Karp Algorithm with Large Dataset](<./Plots/Rabin%20Karp%20(BIG).png>)
+
+KMP Algorithm with Large Dataset
+![KMP Algorithm with Large Dataset](<./Plots/KMP%20(BIG).png>)
+
+Optimized LCSS Algorithm with Large Dataset
+![Optimized LCSS Algorithm with Large Dataset](./Plots/Optimized%20LCSS.png)
+
+### Small Dataset
