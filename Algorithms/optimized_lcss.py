@@ -1,5 +1,8 @@
 from time import time
 
+# This code is a memory optimized version of the dynamic programming
+# The main optimizations are in running the algorithm line by line instead of file by file, not using src_processed and sus_processed, and not using the 2D array (instead using prev and curr arrays)
+
 
 def runLCSS_optimized(src_file_str: str, sus_file_str: str):
     src_file = open(src_file_str, encoding="utf-8")
