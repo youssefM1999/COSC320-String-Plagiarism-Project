@@ -64,6 +64,21 @@ KMP Algorithm with Large Dataset
 ![KMP Algorithm with Large Dataset](<./Plots/KMP%20(BIG).png>)
 
 Optimized LCSS Algorithm with Large Dataset
-![Optimized LCSS Algorithm with Large Dataset](./Plots/Optimized%20LCSS.png)
+![Optimized LCSS Algorithm with Large Dataset](<./Plots/Optimized%20LCSS%20(BIG).png>)
 
 ### Small Dataset
+
+Rabin Karp Algorithm with Small Dataset
+![Rabin Karp Algorithm with Small Dataset](./Plots/Rabin%20Karp.png)
+
+KMP Algorithm with Small Dataset
+![KMP Algorithm with Small Dataset](./Plots/KMP.png)
+
+Optimized LCSS Algorithm with Small Dataset
+![Optimized LCSS Algorithm with Small Dataset](./Plots/Optimized%20LCSS.png)
+
+Dynamic LCSS Algorithm with Small Dataset
+![Dynamic LCSS Algorithm with Small Dataset](./Plots/Dynamic%20LCSS.png)
+
+Naive LCSS Algorithm with Small Dataset
+![Naive LCSS Algorithm with Small Dataset](./Plots/Naive%20LCSS.png)
