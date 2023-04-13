@@ -44,7 +44,7 @@ Due to the massive size of some of the files, the program can take an enormous a
 
 This allowed us to produce graphs for the KMP and Rabin Karp algorithms with our large dataset, but we still ran into memory issues with our LCSS algorithms. This was because our LCSS implementations used a 2D array, as well as temporary storage for our files in the form of `src_processed` and `sus_processed`.
 
-For this reason, we created another implementation, `optimized_lcss.py` which instead iterates the files line by line to check for longest common subsequences and does not created a processed version of the file. It also does not create a 2D array and instead uses 2 different arrays.
+For this reason, we created another implementation, `optimized_lcss.py` which instead iterates the files line by line to check for longest common subsequences and does not create a processed version of the file. It also does not create a 2D array and instead uses 2 different arrays.
 
 With this new file we were able to produce a graph using our large dataset.
 
