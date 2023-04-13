@@ -33,6 +33,7 @@ The project is broken down into four directories and one `main.py` file which is
     -   `test-corpus` is a corpus of 11 source and 11 suspicious documents. The 11 source documents were pulled from a variety of news and scholarly articles, and the suspicious documents were synthetically plagiarised using OpenAI's ChatGPT, as well as manual input.
 -   `Plots` includes all the output plots from `main.py`.
 -   `MilestoneReports` includes all the reports for our milestones.
+-   `Presentation Video` includes the presentation video.
 
 ## How it Works
 
