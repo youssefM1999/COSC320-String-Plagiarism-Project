@@ -11,19 +11,19 @@ dynamic_lcss_times = []
 rabin_karp_times = []
 
 src_dataset = natsorted(
-    glob.glob("Data/external-detection-corpus/source-documents/*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data/test-corpus/sources/*.txt"), alg=ns.IGNORECASE)
 
 sus_dataset = natsorted(
-    glob.glob("Data/external-detection-corpus/source-documents/*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data/test-corpus/sus/*.txt"), alg=ns.IGNORECASE)
 
 # get the maximum of 10 or dataset length
 max_files = min(len(src_dataset), 10)
 
 
 def testAlgorithm(myFunction, time_array: list, algoName: str):
-    for i in range(max_files):
-        src_file = src_dataset[-10:][i]
-        sus_file = sus_dataset[-10:][i]
+    for i in range(len(src_dataset)):
+        src_file = src_dataset[i]
+        sus_file = sus_dataset[i]
 
         # length of source file + length of sus file
         input_size = len(open(src_file, encoding="utf-8").read()) + \
@@ -54,9 +54,9 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
 # TODO: Add comparison functions
 
 
-# testAlgorithm(rabin_karp.runRabinKarp, rabin_karp_times, "Rabin Karp")
-# testAlgorithm(kmp.runKMP, kmp_times, "KMP")
+testAlgorithm(rabin_karp.runRabinKarp, rabin_karp_times, "Rabin Karp")
+testAlgorithm(kmp.runKMP, kmp_times, "KMP")
 testAlgorithm(optimized_lcss.runLCSS_optimized,
               optimized_lcss_times, "Optimized LCSS")
-# testAlgorithm(dynamic_lcss.runLCSS_dynamic, dynamic_lcss_times, "Dynamic LCSS")
-# testAlgorithm(naive_lcss.runLCSS_naive, naive_lcss_times, "Naive LCSS")
+testAlgorithm(dynamic_lcss.runLCSS_dynamic, dynamic_lcss_times, "Dynamic LCSS")
+testAlgorithm(naive_lcss.runLCSS_naive, naive_lcss_times, "Naive LCSS")
