@@ -36,7 +36,9 @@ The project is broken down into three directories and one `main.py` file which i
 
 `main.py` is a simple program for running the algorithms, and can be easily edited to run on different files by editing the `src_dataset` and `sus_dataset` file paths. The program defines the `testAlgorithm` function, and calls it to run the algorithms on the dataset. It is currently configured to run on the last 10 files of the dataset.
 
-Due to the massive size of some of the files, the program can take an enormous amount of time to compute.
+## Problems Encountered
+
+Due to the massive size of some of the files, the program can take an enormous amount of time to compute. For this reason, we decided to use a compute dedicated cloud computer using the Google Cloud Compute Engine API (AMD based, 8 core, 32 GB RAM) to do our large calculations. This allowed us to produce graphs for the KMP and Rabin Karp algorithms with our large dataset, but we still ran into memory issues with our LCSS algorithms. For this
 
 ## How to Run
 
