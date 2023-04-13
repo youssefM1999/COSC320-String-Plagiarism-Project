@@ -1,25 +1,27 @@
-import sys
 import glob
 import matplotlib.pyplot as plt
 from natsort import natsorted, ns
 from time import time
-from Algorithms import kmp, dynamic_lcss, naive_lcss
-
-sys.setrecursionlimit(15000)
+from Algorithms import kmp, rabin_karp, optimized_lcss, dynamic_lcss, naive_lcss
 
 kmp_times = []
 naive_lcss_times = []
+optimized_lcss_times = []
 dynamic_lcss_times = []
+rabin_karp_times = []
 
 src_dataset = natsorted(
-    glob.glob("Data\external-detection-corpus\source-documents\*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data/test-corpus/sources/*.txt"), alg=ns.IGNORECASE)
 
 sus_dataset = natsorted(
-    glob.glob("Data\external-detection-corpus\suspicious-documents\*.txt"), alg=ns.IGNORECASE)
+    glob.glob("Data/test-corpus/sus/*.txt"), alg=ns.IGNORECASE)
+
+# get the maximum of 10 or dataset length
+max_files = min(len(src_dataset), 10)
 
 
 def testAlgorithm(myFunction, time_array: list, algoName: str):
-    for i in range(10):
+    for i in range(len(src_dataset)):
         src_file = src_dataset[i]
         sus_file = sus_dataset[i]
 
@@ -27,7 +29,7 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
         input_size = len(open(src_file, encoding="utf-8").read()) + \
             len(open(sus_file, encoding="utf-8").read())
 
-        print("Running " + algoName + " on documents number " + str(i+1))
+        print("Running " + algoName + " on documents number " + str(i+1) + "\n")
         # Run algorithm and measure running time
         t0 = time()
         myFunction(src_file, sus_file)
@@ -43,14 +45,18 @@ def testAlgorithm(myFunction, time_array: list, algoName: str):
     input_sizes = [x[1] for x in time_array]
 
     plt.plot(input_sizes, running_times, label=algoName)
-    plt.xlabel("Input size")
-    plt.ylabel("Running time")
+    plt.xlabel("Input size (total characters))")
+    plt.ylabel("Running time (seconds)")
     plt.legend()
     plt.savefig("Plots/" + algoName + ".png")
 
 
-# TODO: Add new algorithm and add comparison functions
+# TODO: Add comparison functions
 
+
+testAlgorithm(rabin_karp.runRabinKarp, rabin_karp_times, "Rabin Karp")
 testAlgorithm(kmp.runKMP, kmp_times, "KMP")
-testAlgorithm(naive_lcss.runLCSS_naive, naive_lcss_times, "Naive LCSS")
+testAlgorithm(optimized_lcss.runLCSS_optimized,
+              optimized_lcss_times, "Optimized LCSS")
 testAlgorithm(dynamic_lcss.runLCSS_dynamic, dynamic_lcss_times, "Dynamic LCSS")
+testAlgorithm(naive_lcss.runLCSS_naive, naive_lcss_times, "Naive LCSS")

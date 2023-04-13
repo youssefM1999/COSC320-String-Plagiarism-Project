@@ -1,10 +1,8 @@
 # Rabin Karp Algorithm, as seen in CLRS book
 # d is the number of characters in the input alphabet
-d = 256
-
-
-from time import time
 import sys
+from time import time
+d = 256
 
 
 def search(pat, text, q):
@@ -41,12 +39,12 @@ def search(pat, text, q):
             if t < 0:
                 t = t + q
 
-    # Driver Code
+# Driver Code
 
 
-if __name__ == "__main__":
-    src = open("Data/external-detection-corpus/source-documents/source-document00001.txt", encoding="utf-8")
-    sus = open("Data/external-detection-corpus/suspicious-documents/suspicious-document00001.txt", encoding="utf-8")
+def runRabinKarp(src_file: str, sus_file: str):
+    src = open(src_file, encoding="utf-8")
+    sus = open(sus_file, encoding="utf-8")
 
     txt = src.read().lower()
     pat = sus.read().lower()
@@ -58,8 +56,11 @@ if __name__ == "__main__":
     q = 101
 
     # Function Call
-    t0 = time()
+    # t0 = time()
     search(pat, txt, q)
-    t1 = time()
+    # t1 = time()
 
-    print(f"Ran Rabin-Karp in {t1-t0} seconds")
+    # print(f"Ran Rabin-Karp in {t1-t0} seconds")
+
+    src.close()
+    sus.close()
