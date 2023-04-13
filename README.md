@@ -28,7 +28,8 @@ The project is broken down into four directories and one `main.py` file which is
 
 -   `Algorithms` includes the four algorithms which are ran for analysis in their respective files. These are all wrapped in functions which are called in `main.py`.
 -   `Data` includes two directories, `external-detection-corpus` and `test-corpus`.
-    -   `external-detection-corpus` is a corpus of 500 source documents and 500 potentially plagiarised documents which compose the main testing set. (**add source**)
+    -   `external-detection-corpus` is a corpus of 500 source documents and 500 potentially plagiarised documents which compose the main testing set.
+        -   **Source**: Potthast, Martin, Stein, Benno, Eiselt, Andreas, Barrón-Cedeño, Alberto, & Rosso, Paolo. (2011). PAN Plagiarism Corpus 2011 (PAN-PC-11) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.3250095
     -   `test-corpus` is a corpus of 11 source and 11 suspicious documents. The 11 source documents were pulled from a variety of news and scholarly articles, and the suspicious documents were synthetically plagiarised using OpenAI's ChatGPT, as well as manual input.
 -   `Plots` includes all the output plots from `main.py`.
 -   `MilestoneReports` includes all the reports for our milestones.
