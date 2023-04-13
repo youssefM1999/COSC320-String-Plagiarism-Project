@@ -81,6 +81,9 @@ def runKMP(src_file_path, sus_file_path):
     for index in indexes:
         print(f"Found plagiarism at index {index}")
 
+    src_file.close()
+    sus_file.close()
+
 # *Sources
 # The following online resources were used in researching the KMP algorithm for this implementation
 

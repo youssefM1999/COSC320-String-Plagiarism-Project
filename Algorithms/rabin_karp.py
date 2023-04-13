@@ -61,3 +61,6 @@ def runRabinKarp(src_file: str, sus_file: str):
     # t1 = time()
 
     # print(f"Ran Rabin-Karp in {t1-t0} seconds")
+
+    src.close()
+    sus.close()

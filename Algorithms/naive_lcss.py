@@ -43,3 +43,6 @@ def runLCSS_naive(src_file_str: str, sus_file_str: str):
     print("The longest common subsequence in this text is: " +
           str(longest_subsequence))
     # print("The running time of this algorithm is: " + str(t1-t0))
+
+    src_file.close()
+    sus_file.close()
