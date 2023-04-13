@@ -15,11 +15,14 @@ src_dataset = natsorted(
 sus_dataset = natsorted(
     glob.glob("Data/external-detection-corpus/source-documents/*.txt"), alg=ns.IGNORECASE)
 
+# get the maximum of 10 or dataset length
+max_files = min(len(src_dataset), 10)
+
 
 def testAlgorithm(myFunction, time_array: list, algoName: str):
-    for i in range(len(src_dataset)[-10:]):
-        src_file = src_dataset[i]
-        sus_file = sus_dataset[i]
+    for i in range(max_files):
+        src_file = src_dataset[-10:][i]
+        sus_file = sus_dataset[-10:][i]
 
         # length of source file + length of sus file
         input_size = len(open(src_file, encoding="utf-8").read()) + \
